@@ -9,7 +9,7 @@ public class Geometry {
         }
 
     private static void printRectangleArea(double a, double b) {
-        System.out.println("Площадь прямоугольника cо cторонами " + a + " и " + b + " = " + rectangleArea(a, b));
+        System.out.println("Площадь прямоугольника cо сторонами " + a + " и " + b + " = " + rectangleArea(a, b));
     }
 
     private static double rectangleArea(double a, double b) {
@@ -17,7 +17,7 @@ public class Geometry {
     }
 
     static void printSquareArea(double a) {
-        System.out.println("Площадь квадрата cо cтороной" + a + " = " + squareArea(a));
+        System.out.println("Площадь прямоугольника cо сторонами" + a + " = " + squareArea(a));
     }
 
     private static double squareArea(double a) {
