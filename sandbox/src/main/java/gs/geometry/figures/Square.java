@@ -2,7 +2,7 @@ package gs.geometry.figures;
 
 public class Square {
 
-    private double side;
+    double side;
 
     public Square(double side) {
         this.side = side;

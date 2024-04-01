@@ -3,7 +3,10 @@ package gs.geometry.figures;
 public class Triangle {
     public static Object printTrianglePerimeter;
 
-        public static void printTrianglePerimeter(double a, double b, double c) {
+    public Triangle(double a, double b, double c) {
+    }
+
+    public static void printTrianglePerimeter(double a, double b, double c) {
             var text = String.format("Периметр треугольника со сторонами %f, %f и %f = %f", a, b, c, TrianglePerimeter(a, b, c));
             System.out.println(text);
         }
