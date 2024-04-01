@@ -13,8 +13,9 @@ public class Square {
         System.out.println(text);
     }
 
-    public static double area(double a) {
-        return a * a;
+    public static void printSquarePerimeter(Square s) {
+        String text = String.format("Периметр квадрата со сторонами %f = %f", s.side, s.perimeter());
+        System.out.println(text);
     }
 
     public double area() {

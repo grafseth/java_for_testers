@@ -1,23 +1,24 @@
 package gs.geometry.figures;
 
 public class Triangle {
-    public class Triangle {
+    public static Object printTrianglePerimeter;
 
-        private double a;
-        private double b;
-        private double c;
-
-        public void Triangle(double a, double b, double c) {
-            this.a = a;
-            this.b = b;
-            this.c = c;
-        }
-        public static void printRectangleArea(double a, double b, double c) {
-            var text = String.format("Периметр треугольника со сторонами %f, %f и %f = %f", a, b, c, trianglePerimeter(a, b, c));
+        public static void printTrianglePerimeter(double a, double b, double c) {
+            var text = String.format("Периметр треугольника со сторонами %f, %f и %f = %f", a, b, c, TrianglePerimeter(a, b, c));
             System.out.println(text);
         }
-  }
 
-    private static Object trianglePerimeter(double a, double b, double c) {
-        return ();
+        public static void printTriangleArea(double a, double b, double c) {
+            var text = String.format("Площадь треугольника со сторонами %f, %f и %f = %f", a, b, c, TriangleArea(a, b, c));
+            System.out.println(text);
+        }
+
+    private static Object TrianglePerimeter(double a, double b, double c) {
+        return (a + b + c);
     }
+    public static double TriangleArea(double a, double b, double c) {
+        double p = (a + b + c) / 2;
+        double area = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+        return area;
+       }
+  }
