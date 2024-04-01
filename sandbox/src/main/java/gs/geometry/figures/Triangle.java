@@ -16,7 +16,7 @@ public class Triangle {
             System.out.println(text);
         }
 
-    private static Object TrianglePerimeter(double a, double b, double c) {
+    static Object TrianglePerimeter(double a, double b, double c) {
         return (a + b + c);
     }
     public static double TriangleArea(double a, double b, double c) {
