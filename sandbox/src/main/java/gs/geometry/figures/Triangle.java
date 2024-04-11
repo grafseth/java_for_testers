@@ -1,11 +1,16 @@
 package gs.geometry.figures;
 
-public class Triangle {
-    double a;
-    double b;
-    double c;
+public record Triangle(double a, double b, double c) {
 
-    public Triangle() {this.a = a; this.b = b; this.c = c;}
+
+    public Triangle(double a, double b, double c) {
+        if (a < 0 || b < 0 || c < 0) {
+            throw new IllegalArgumentException("Сторона треугольник ане может быть отрицательной");
+        }
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
 
     public static void printtrianglePerimeter(double a, double b, double c) {
             var text = String.format("Периметр треугольника со сторонами %f, %f и %f = %f", a, b, c, trianglePerimeter(a, b, c));
