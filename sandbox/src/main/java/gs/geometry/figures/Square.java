@@ -1,12 +1,12 @@
 package gs.geometry.figures;
 
-public class Square {
+public record Square(double side) {
 
-    double side;
-
-    public Square(double side) {
-        this.side = side;
+public Square {
+    if (side < 0) {
+        throw new IllegalArgumentException("Square side shouldn`t be negative");
     }
+}
 
     public static void printSquareArea(Square s) {
         String text = String.format("Площадь квадрата cо сторонами %f = %f", s.side, s.area());
