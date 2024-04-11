@@ -18,12 +18,15 @@ public class Triangle {
         }
 
     public static Object trianglePerimeter(double a, double b, double c) {
-        double perimeter = (a + b + c);
-        return (perimeter);
+        return ((a + b + c));
     }
     public static double triangleArea(double a, double b, double c) {
-        double p = (a + b + c) / 2;
-        double area = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-        return area;
+        double p = semiPerimeter(a, b, c);
+        return Math.sqrt(p * (p - a) * (p - b) * (p - c));
+       }
+       
+       public static double semiPerimeter(double a, double b, double c) {
+         double perimeter = (double) trianglePerimeter(a, b, c);
+           return (perimeter) / 2;
        }
   }
