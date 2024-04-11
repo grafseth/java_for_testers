@@ -1,12 +1,13 @@
 package gs.geometry.figures;
 
-public record Triangle(double a, double b, double c) {
+public class Triangle
+{
+    double a;
+    double b;
+    double c;
 
 
-    public Triangle(double a, double b, double c) {
-        if (a < 0 || b < 0 || c < 0) {
-            throw new IllegalArgumentException("Сторона треугольник ане может быть отрицательной");
-        }
+    public Triangle() {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -29,7 +30,7 @@ public record Triangle(double a, double b, double c) {
         double p = semiPerimeter(a, b, c);
         return Math.sqrt(p * (p - a) * (p - b) * (p - c));
        }
-       
+
        public static double semiPerimeter(double a, double b, double c) {
          double perimeter = (double) trianglePerimeter(a, b, c);
            return (perimeter) / 2;
