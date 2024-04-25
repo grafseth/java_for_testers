@@ -8,10 +8,11 @@ public class Hello {
             var z = divide(x, y);
             System.out.println("Hello, World!");
         }
-        }
-        private static int divide ( int x, int y){
-            var z = x / y;
-            return z;
-        }
     }
+
+    private static int divide(int x, int y) {
+        var z = x / y;
+        return z;
+    }
+}
 

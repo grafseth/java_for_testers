@@ -2,11 +2,11 @@ package gs.geometry.figures;
 
 public record Square(double side) {
 
-public Square {
-    if (side < 0) {
-        throw new IllegalArgumentException("Square side shouldn`t be negative");
+    public Square {
+        if (side < 0) {
+            throw new IllegalArgumentException("Square side shouldn`t be negative");
+        }
     }
-}
 
     public static void printSquareArea(Square s) {
         String text = String.format("Площадь квадрата cо сторонами %f = %f", s.side, s.area());
